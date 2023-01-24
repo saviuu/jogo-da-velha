@@ -1,10 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
 import { JogoDaVelhaModule } from './jogo-da-velha';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
@@ -12,11 +13,12 @@ describe('AppComponent', () => {
         JogoDaVelhaModule
       ]
     }).compileComponents();
-  });
+  }));
 
-  it('should create the app', () => {
+  it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
- });
+  }));
+
+});

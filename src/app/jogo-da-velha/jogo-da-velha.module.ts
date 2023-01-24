@@ -1,22 +1,21 @@
-import { JogoDaVelhaService } from './shared/services/jogo-da-velha.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { JogoDaVelhaComponent } from './jogo-da-velha.component';
-
-
+import { JogoDaVelhaService } from './shared';
 
 @NgModule({
-  declarations: [
-    JogoDaVelhaComponent
-  ],
   imports: [
     CommonModule
   ],
+  declarations: [
+  	JogoDaVelhaComponent
+  ],
   exports: [
-    JogoDaVelhaComponent
+  	JogoDaVelhaComponent
   ],
   providers: [
-    JogoDaVelhaService
+  	JogoDaVelhaService
   ]
 })
 export class JogoDaVelhaModule { }
